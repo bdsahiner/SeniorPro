@@ -1,0 +1,60 @@
+[
+    {
+        "fullName": "John Doe",
+        "emailAddress": "john.doe@example.com",
+        "phoneNumber": "+1234567890",
+        "province": "Ontario",
+        "generalDescription": "John Doe is a highly motivated and results-oriented IT professional with over 5 years of experience in the field of network administration and support. Throughout his career, John has consistently demonstrated a strong ability to troubleshoot and resolve even the most complex technical issues. He possesses a broad skillset encompassing a variety of network technologies, including TCP/IP, routing, switching, and security. John is a valuable asset to any team seeking a skilled and dedicated network professional.",
+        "totalExperience": 5,
+        "expTitle": [
+            "Network Administrator",
+            "IT Support Specialist"
+        ],
+        "expCompany": [
+            "ABC Company",
+            "XYZ Company"
+        ],
+        "expMonths": [
+            24,
+            36
+        ],
+        "expDescription": [
+            "At ABC Company, John provided comprehensive network administration support for a company with over 100 users. He effectively troubleshooted and resolved a wide range of network connectivity issues, ensuring smooth operation and user productivity. John played a key role in configuring and maintaining various network devices, including routers, switches, and firewalls. Additionally, he implemented and maintained robust network security policies, safeguarding the company's data and systems.",
+            "During his time as an IT Support Specialist at XYZ Company, John provided essential IT support to a company with 50+ users. He efficiently resolved both hardware and software issues, ensuring smooth operation for all employees. John also played a crucial role in installing and configuring new software, keeping the company's systems up-to-date.  Furthermore, he provided user training and ongoing support, empowering employees to effectively utilize the available technology."
+        ],
+        "eduSchoolTitle": "University of Toronto",
+        "eduDepartment": "Computer Science",
+        "eduYears": 4,
+        "eduDescription": "John holds a Bachelor of Science in Computer Science from the prestigious University of Toronto. His academic background equipped him with a strong foundation in computer science principles, which he effectively applies to his work in network administration.",
+        "additionalDescription": "Beyond his technical expertise, John also possesses a strong skillset in a variety of IT tools and technologies, including Microsoft Active Directory, VMware, and Help Desk ticketing systems. He excels in communication and interpersonal skills, fostering strong relationships with colleagues and clients alike. John is a problem-solver with exceptional analytical abilities, readily tackling complex challenges with a positive and results-oriented approach. John is a true team player with a positive attitude, always willing to go the extra mile to contribute to the success of the team and the organization."
+    }
+  {
+        "fullName": "Jane Smith",
+        "emailAddress": "jane.smith@example.com",
+        "phoneNumber": "+1987654321",
+        "province": "British Columbia",
+        "generalDescription": "Jane Smith is a creative and passionate graphic designer with over 3 years of experience in crafting visually appealing and user-friendly graphics for both print and web media. Jane possesses a high level of proficiency in a variety of industry-standard design software, including Adobe Photoshop, Illustrator, and InDesign.  She has a strong understanding of design principles and best practices, allowing her to consistently deliver high-quality and impactful design solutions.",
+        "totalExperience": 3,
+        "expTitle": [
+            "Graphic Designer",
+            "Web Design Intern"
+        ],
+        "expCompany": [
+            "ABC Design Agency",
+            "XYZ Company"
+        ],
+        "expMonths": [
+            36,
+            6
+        ],
+        "expDescription": [
+            "During her tenure at ABC Design Agency, Jane designed a diverse range of marketing materials for various clients, including brochures, flyers, and captivating social media graphics.  She played a key role in creating website mockups and user interfaces, ensuring both visual appeal and user-friendliness. Jane consistently demonstrated a strong ability to collaborate effectively with clients, actively listening to their needs and translating those needs into creative and impactful design solutions.",
+            "As a Web Design Intern at XYZ Company, Jane had the opportunity to gain valuable experience assisting senior graphic designers with web design projects. This experience allowed her to learn about core web design principles and best practices, laying a strong foundation for her future career in this field."
+        ],
+        "eduSchoolTitle": "Emily Carr University of Art and Design",
+        "eduDepartment": "Graphic Design",
+        "eduYears": 4,
+        "eduDescription": "Jane holds a Bachelor of Fine Arts in Graphic Design from the prestigious Emily Carr University of Art and Design. Her academic program provided her with a comprehensive understanding of design theory, visual communication principles, and the latest design software applications. This strong foundation, combined with her natural creativity and passion for design, has equipped her to excel in the professional design environment.",
+        "additionalDescription": "Beyond her technical skills and design expertise, Jane also possesses excellent communication and interpersonal skills. She thrives in collaborative environments and fosters strong relationships with colleagues and clients alike. Jane is a highly motivated and results-oriented individual with a strong work ethic.  She is a quick learner who is eager to expand her knowledge and skillset. Jane is a team player with a positive attitude who brings a burst of creativity and enthusiasm to any project she undertakes."
+    }
+]
