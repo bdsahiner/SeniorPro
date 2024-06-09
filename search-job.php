@@ -1,6 +1,10 @@
 <?php
 include_once "config/connection.php";
+<<<<<<< HEAD
 include_once "search-job-model.php";
+=======
+include_once "test-backend.php";
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 ?>
 <!DOCTYPE html>
@@ -17,6 +21,7 @@ include_once "search-job-model.php";
 ================================================== -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/colors/main.css" id="colors">
+<<<<<<< HEAD
     <style>
         /* Styles for search suggestions dropdown */
         #searchSuggestions {
@@ -39,6 +44,9 @@ include_once "search-job-model.php";
             background-color: #f0f0f0;
         }
     </style>
+=======
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 </head>
 
 <body>
@@ -83,6 +91,7 @@ include_once "search-job-model.php";
         <div class="container">
             <div class="row">
 
+<<<<<<< HEAD
                 <div class="col-md-12">
                     <form method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <div class="row margin-bottom-25 margin-top-30">
@@ -97,6 +106,8 @@ include_once "search-job-model.php";
                     </form>
                 </div>
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                 <!-- Search -->
                 <form method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
@@ -115,8 +126,17 @@ include_once "search-job-model.php";
                                                 <div class="card card-body" style="max-height: 200px; overflow-y: auto;">
                                                     <?php foreach ($option['data'] as $dataItem) { ?>
                                                         <div class="form-check">
+<<<<<<< HEAD
                                                             <input class="form-check-input" type="checkbox" name="filters[<?php echo $option['key']; ?>][]" id="<?php echo $option['key']; ?>_<?php echo $dataItem[$option['key']]; ?>" value="<?php echo $dataItem[$option['key']]; ?>">
                                                             <label class="form-check-label" for="<?php echo $option['key']; ?>_<?php echo $dataItem[$option['key']]; ?>">
+=======
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="filters[<?php echo $option['key']; ?>][]"
+                                                                id="<?php echo $option['key']; ?>_<?php echo $dataItem[$option['key']]; ?>"
+                                                                value="<?php echo $dataItem[$option['key']]; ?>">
+                                                            <label class="form-check-label"
+                                                                for="<?php echo $option['key']; ?>_<?php echo $dataItem[$option['key']]; ?>">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                                                                 <?php echo $dataItem[$option['key']]; ?>
                                                             </label>
                                                         </div>
@@ -197,7 +217,12 @@ include_once "search-job-model.php";
                                             </h3>
                                             <span><?php echo $job['companyName']; ?></span>
                                             <div>
+<<<<<<< HEAD
                                                 <i class="fa fa-map-marker" style="padding-right:7px;"></i><span><?php echo $job['province']; ?>,
+=======
+                                                <i class="fa fa-map-marker"
+                                                    style="padding-right:7px;"></i><span><?php echo $job['province']; ?>,
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                                                     Turkiye </span>
                                                 <br>
                                                 <br>
@@ -228,6 +253,7 @@ include_once "search-job-model.php";
         </div>
         <!-- Wrapper / End -->
 
+<<<<<<< HEAD
 
         <script src="scripts/jquery-2.2.0.min.js"></script>
         <script>
@@ -262,6 +288,44 @@ include_once "search-job-model.php";
                     var selectedText = $(this).text();
                     $('#searchTerm').val(selectedText);
                     $('#searchSuggestions').hide();
+=======
+        <script>
+            function updateInterfaceWithFilters() {
+                var urlParams = new URLSearchParams(window.location.search);
+                var filters = urlParams.getAll('filters[]');
+
+                // Loop through each filter option and mark them as selected
+                filters.forEach(function (filter) {
+                    var checkboxes = document.querySelectorAll('input[name^="filters[' + filter + ']"]:not(:checked)');
+                    checkboxes.forEach(function (checkbox) {
+                        checkbox.checked = true;
+                    });
+                });
+            }
+
+            // Call the function to update interface when the page loads
+            window.onload = function () {
+                updateInterfaceWithFilters();
+            };
+
+            // Function to update form action with selected filters
+            function updateFormAction() {
+                var selectedFilters = document.querySelectorAll('input[name^="filters"]:checked');
+                var filterParams = Array.from(selectedFilters).map(function (checkbox) {
+                    return encodeURIComponent(checkbox.name) + '=' + encodeURIComponent(checkbox.value);
+                }).join('&');
+
+                var form = document.querySelector('form');
+                form.action = form.getAttribute('action').split('?')[0] + '?' + filterParams;
+            }
+
+            // Call the function to update form action when checkboxes are clicked
+            document.addEventListener('DOMContentLoaded', function () {
+                updateFormAction(); // Update form action initially
+                var checkboxes = document.querySelectorAll('input[name^="filters"]');
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.addEventListener('click', updateFormAction);
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                 });
             });
         </script>

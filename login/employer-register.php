@@ -67,40 +67,65 @@ if (isset($_SESSION['user'])) {
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Full Name is required">
 						<span class="label-input100">Full Name</span>
+<<<<<<< HEAD
 						<input class="input100" type="text" name="userName" placeholder="Type your name" required>
+=======
+						<input class="input100" type="text" name="userName" placeholder="Type your name">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Phone Number is required">
 						<span class="label-input100">Phone Number</span>
+<<<<<<< HEAD
 						<input class="input100" type="number" name="phoneNumber" placeholder="Please write only 10 digits (ex: 5554443322)"
 							id="phoneNumber" oninput="this.value = this.value.slice(0, 10);" required>
+=======
+						<input class="input100" type="number" name="phoneNumber" placeholder="Type your phone number">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf2b6;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Government tax ID is required">
 						<span class="label-input100">Company Name</span>
 						<input class="input100" type="text" name="companyName"
+<<<<<<< HEAD
 							placeholder="Type your phone company name" required>
+=======
+							placeholder="Type your phone company name">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf203;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Government tax ID is required">
 						<span class="label-input100">Government Tax ID</span>
+<<<<<<< HEAD
 						<input class="input100" type="number" name="taxID" placeholder="Type your phone government tax ID"
 							id="taxID" oninput="this.value = this.value.slice(0, 10);" required>
+=======
+						<input class="input100" type="text" name="taxID"
+							placeholder="Type your phone government tax ID">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf150;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Email is required">
 						<span class="label-input100">Email</span>
+<<<<<<< HEAD
 						<input class="input100" type="email" name="userEmail" placeholder="Type your email" required>
+=======
+						<input class="input100" type="email" name="userEmail" placeholder="Type your email">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf200;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
+<<<<<<< HEAD
 						<input class="input100" type="password" name="userPw" placeholder="Type your password" minlength="8" required>
+=======
+						<input class="input100" type="password" name="userPw" placeholder="Type your password">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
@@ -124,6 +149,10 @@ if (isset($_SESSION['user'])) {
 		</div>
 	</div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 	<div id="dropDownSelect1"></div>
 
 	<!--===============================================================================================-->

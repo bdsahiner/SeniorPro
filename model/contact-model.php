@@ -5,9 +5,12 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require_once '../vendor/autoload.php';
+<<<<<<< HEAD
 require_once "../classes/log.class.php";
 $log = new Log();
 $ipAddress = $_SERVER['REMOTE_ADDR'];
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 if (isset($_POST['submit'])) {
 
@@ -43,8 +46,13 @@ if (isset($_POST['submit'])) {
         $mail->Body = $body;
 
         $mail->send();
+<<<<<<< HEAD
  
         $log->add($fullName . ' submitted a contact form about ' . $subjectInput . ' from the IP address ' . $ipAddress . '.');
+=======
+        echo 'Message has been sent';
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
         echo '<script>alert("Successfully sent!");history.go(-1);</script>';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

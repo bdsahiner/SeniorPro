@@ -80,7 +80,11 @@ include_once "config/connection.php";
 								<h2><?php echo $job['jobTitle'] ?> <span
 										class="listing-tag"><?php echo $job['sector'] ?></span></h2>
 								<span>
+<<<<<<< HEAD
 									<a href="company-details?id=<?php echo $job['companyId'] ?>" target="_blank">
+=======
+									<a href="company-details?id=<?php echo $job['companyId'] ?>" class="listing-address">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 										<i class="fa fa-building"></i>
 										<?php echo $job['companyName'] ?>
 									</a>

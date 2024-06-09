@@ -17,6 +17,7 @@ if (isset($_SESSION['user'])) {
                         <a href="../" class="dashboard-logo"><img src="../images/logo.png" alt=""></a>
                     </div>
 
+<<<<<<< HEAD
                     <!-- Main Navigation -->
                     <nav id="navigation" class="style-1">
                         <ul id="responsive">
@@ -30,6 +31,8 @@ if (isset($_SESSION['user'])) {
                     <div class="clearfix"></div>
                     <!-- Main Navigation / End -->
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                 </div>
                 <!-- Left Side Content / End -->
 
@@ -76,6 +79,7 @@ if (isset($_SESSION['employer'])) {
                         <a href="../" class="dashboard-logo"><img src="../images/logo.png" alt=""></a>
                     </div>
 
+<<<<<<< HEAD
                     <!-- Main Navigation -->
                     <nav id="navigation" class="style-1">
                         <ul id="responsive">
@@ -89,6 +93,8 @@ if (isset($_SESSION['employer'])) {
                     <div class="clearfix"></div>
                     <!-- Main Navigation / End -->
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                 </div>
                 <!-- Left Side Content / End -->
 
@@ -114,6 +120,7 @@ if (isset($_SESSION['employer'])) {
     </header>
 
     <?php
+<<<<<<< HEAD
 }
 
 if (isset($_SESSION['admin'])) {
@@ -173,3 +180,6 @@ if (isset($_SESSION['admin'])) {
     <?php
 }
 ?>
+=======
+} ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11

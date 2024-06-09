@@ -62,6 +62,7 @@ $filterOptions = array(
 $filters = [];
 
 // Retrieve filter parameters from the URL
+<<<<<<< HEAD
 if (isset($_GET['filters'])) {
     $filters = $_GET['filters'];
 }
@@ -69,6 +70,12 @@ if (isset($_GET['filters'])) {
 // Retrieve search term from the URL
 $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
 
+=======
+if(isset($_GET['filters'])) {
+    $filters = $_GET['filters'];
+}
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 // Constructing the SQL query dynamically based on the received filters
 $query = "SELECT * FROM jobs WHERE 1=1";
 
@@ -83,6 +90,7 @@ foreach ($filterOptions as $option) {
     }
 }
 
+<<<<<<< HEAD
 // Add search term to the query
 if (!empty($searchTerm)) {
     $query .= " AND (jobTitle LIKE ? OR companyName LIKE ?)";
@@ -95,4 +103,9 @@ $flatFilters = array_merge(...array_values($filters));
 // Assuming you have a database connection established, execute the query
 $stmt = $dbh->prepare($query);
 $stmt->execute($flatFilters);
+=======
+// Assuming you have a database connection established, execute the query
+$stmt = $dbh->prepare($query);
+$stmt->execute(array_merge(...array_values($filters)));
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 $jobListings = $stmt->fetchAll(PDO::FETCH_ASSOC);

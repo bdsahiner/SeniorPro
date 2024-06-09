@@ -1,11 +1,21 @@
 <?php
 
+<<<<<<< HEAD
+=======
+include_once "../config/connection.php";
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
+<<<<<<< HEAD
 include_once "../config/connection.php";
 
 require_once "../classes/log.class.php";
@@ -18,6 +28,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
 $ipAddress = $_SERVER['REMOTE_ADDR'];
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 $userId = $_SESSION['id'];
 
 if (isset($_GET['id'])) {
@@ -34,7 +46,10 @@ $verificationCode = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
 $bringUsername = $dbh->prepare("SELECT * FROM users WHERE id = ?");
 $bringUsername->execute([$userId]);
 $userName = $bringUsername->fetchAll(PDO::FETCH_ASSOC);
+<<<<<<< HEAD
 $userFullName = $userName[0]['fullName'];
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 // Handle the password change request for both employer and employee
 if (isset($_POST['changePassword'])) {
@@ -63,7 +78,10 @@ if (isset($_POST['changePassword'])) {
     $updateUsers = $dbh->prepare("UPDATE users SET `password` = ? WHERE `id` = ?");
 
     if ($updateUsers->execute([$newPasswordInput, $userId])) {
+<<<<<<< HEAD
         $log->add($userFullName . ' changed their current password from the IP address ' . $ipAddress . '.');
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
         echo "<script>alert('You have successfully changed your password.');history.go(-1);</script>";
         exit;
     } else {
@@ -142,11 +160,14 @@ if (isset($_SESSION['employer'])) {
         $compSector = $descp['sector'];
     }
 
+<<<<<<< HEAD
     if ($compDate > $currentDate) {
         echo "<script>alert('Establishment date can not be later than today!.');history.go(-1);</script>";
         die();
     }
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     if (isset($_POST['submitChanges'])) {
 
         $headQuarters = $_POST['headQuarters'];
@@ -161,7 +182,10 @@ if (isset($_SESSION['employer'])) {
             $updateQuery = "UPDATE companies SET companyDescription = ?, headQuarters = ?, sector = ?, employeeCount = ?, establishDate = ?, website = ? WHERE employerId = ?";
             $connection = $dbh->prepare($updateQuery);
             if ($connection->execute([$companyDescription, $headQuarters, $sector, $employeeCount, $dateOfEstablishment, $website, $userId])) {
+<<<<<<< HEAD
                 $log->add($userFullName . ' updated their company profile information from the IP address ' . $ipAddress . '.');
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                 echo "<script>alert('Successfully updated.');history.go(-1);</script>";
                 exit;
             } else {
@@ -172,7 +196,10 @@ if (isset($_SESSION['employer'])) {
             $updateQuery = "UPDATE companies SET companyDescription = ?, employeeCount = ?, website = ? WHERE employerId = ?";
             $connection = $dbh->prepare($updateQuery);
             if ($connection->execute([$companyDescription, $employeeCount, $website, $userId])) {
+<<<<<<< HEAD
                 $log->add($userFullName . ' updated their company profile information from the IP address ' . $ipAddress . '.');
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
                 echo "<script>alert('Successfully updated.');history.go(-1);</script>";
                 exit;
             } else {
@@ -190,7 +217,10 @@ if (isset($_SESSION['employer'])) {
 
         $updateJob = $dbh->prepare("UPDATE jobs SET jobDescription = ?, endDate = ? WHERE id = ?");
         if ($updateJob->execute([$jobDescript, $endingDate, $jobId])) {
+<<<<<<< HEAD
             $log->add($userFullName . ' updated the job posting with ID ' . $jobId . ' from the IP address ' . $ipAddress . '.');
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
             echo "<script>alert('Successfully updated.');history.go(-1);</script>";
             exit;
         } else {
@@ -242,7 +272,10 @@ if (isset($_SESSION['user']) || isset($_SESSION['employer'])) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
 
+<<<<<<< HEAD
         $log->add($userFullName . ' updated their profile information from the IP address ' . $ipAddress . '.');
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
         $updateUserProfile = $dbh->prepare("UPDATE users SET fullName = ?, phoneNumber = ?, email = ?, verificationCode = ?, verificated = ? WHERE id = ?");
         $updateUserProfile->execute([$fullName, $phoneNumber, $emailAddress, $verificationCode, 0, $userId]);
 
@@ -283,6 +316,7 @@ if (isset($_SESSION['user'])) {
     }
 
 
+<<<<<<< HEAD
 }
 
 if (isset($_SESSION['admin'])) {
@@ -363,4 +397,6 @@ if (isset($_SESSION['admin'])) {
         echo "<script>history.go(-1);</script>";
 
     }
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 }

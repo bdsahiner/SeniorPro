@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Jun 02, 2024 at 08:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
+=======
+-- Generation Time: May 02, 2024 at 09:06 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,6 +55,7 @@ CREATE TABLE `bookmarks` (
   `bookmarkDate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `bookmarks`
 --
@@ -56,6 +63,8 @@ CREATE TABLE `bookmarks` (
 INSERT INTO `bookmarks` (`id`, `jobId`, `employeeId`, `bookmarkDate`) VALUES
 (1, 1, 3, '2024-06-02 20:40:21');
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 -- --------------------------------------------------------
 
 --
@@ -76,6 +85,7 @@ CREATE TABLE `companies` (
   `verified` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `companies`
 --
@@ -84,6 +94,8 @@ INSERT INTO `companies` (`id`, `employerId`, `companyName`, `taxNumber`, `compan
 (1, 2, 'Atilim Limited Company', 2147483647, 'Atilim Limited Company is a prominent leader in the logistics industry, specializing in providing comprehensive and efficient logistics solutions to businesses worldwide. With a focus on leveraging advanced technology and industry expertise, we offer a wide range of services tailored to meet the diverse needs of our clients, including warehousing, transportation, distribution, and supply chain management.\n\nAt Atilim Limited Company, we understand the critical role that logistics play in the success of businesses, and we are committed to delivering reliable, cost-effective, and innovative solutions that streamline operations and drive growth. Our dedicated team of logistics professionals works tirelessly to optimize processes, reduce costs, and enhance efficiency, ensuring seamless coordination and timely delivery of goods across the supply chain.\n\nWith a customer-centric approach and a relentless pursuit of excellence, Atilim Limited Company is your trusted partner for all your logistics needs. Whether you\'re a small business or a multinational corporation, you can rely on us to provide tailored solutions that propel your business forward and help you stay ahead in today\'s competitive market.', 'Ankara', 'Logistics', 36, '2024-05-15', 'www.atilimsan.com', 1),
 (2, 4, 'Test Limited Company', 2147483647, 'Lorem ipsum dolor sit amet.', 'İstanbul', 'Manufacturing', 45, '2003-05-05', 'testlimited.com', 1);
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 -- --------------------------------------------------------
 
 --
@@ -111,6 +123,7 @@ CREATE TABLE `cvbuilder` (
   `submittedAt` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `cvbuilder`
 --
@@ -118,6 +131,8 @@ CREATE TABLE `cvbuilder` (
 INSERT INTO `cvbuilder` (`id`, `fullName`, `emailAddress`, `phoneNumber`, `province`, `generalDescription`, `totalExperience`, `expTitle`, `expCompany`, `expMonths`, `expDescription`, `eduSchoolTitle`, `eduDepartment`, `eduYears`, `eduDescription`, `additionalDescription`, `userId`, `submittedAt`) VALUES
 (1, 'John Doe', 'deneme@deneme.com', '5365905504', '', 'I am a highly motivated and detail-oriented individual with a passion for learning and growth. With a strong background in customer service and problem-solving, I am adept at working in fast-paced environments while maintaining a positive attitude. I thrive in collaborative settings and am always eager to take on new challenges.', 2, 'Sales Associate, Marketing Intern', 'XYZ Corporation, ABC Company', '12, 17', 'Responsible for providing exceptional customer service, managing inventory, and achieving sales targets. Collaborated with cross-functional teams to optimize store operations and enhance the overall customer experience., Assisted the marketing team in developing and implementing social media campaigns. Conducted market research and analysis to identify trends and opportunities for growth. Created engaging content for various digital platforms.', 'Test Uni', 'Test', 4, 'Lorem ipsum dolor sit amet', 'I am proficient in Microsoft Office Suite and have strong communication skills, both written and verbal. I am a quick learner and thrive in dynamic environments where I can utilize my creativity and problem-solving abilities to drive results.', 3, '2024-06-02 19:18:46');
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 -- --------------------------------------------------------
 
 --
@@ -199,12 +214,24 @@ CREATE TABLE `jobs` (
 --
 
 INSERT INTO `jobs` (`id`, `jobTitle`, `jobDescription`, `companyId`, `companyName`, `province`, `requestDate`, `publishDate`, `endDate`, `sector`, `experience`, `department`, `workType`, `educationLevel`, `languagePreference`, `verified`) VALUES
+<<<<<<< HEAD
 (1, 'Automotive Technician', 'Automotive Technicians are needed to perform diagnostics, repairs, and maintenance on various types of vehicles. The role involves troubleshooting mechanical issues, replacing faulty parts, and ensuring vehicles meet performance standards. Strong problem-solving skills and hands-on experience in automotive repair are required.', 2, 'Atilim Limited Company', 'Ankara', '2024-05-19 23:24:36', '2024-05-19 23:24:36', '2024-05-26 00:00:00', 'Automative', 'Senior', 'Maintenance', 'Seasonal', 'Graduate', 'Turkish,English', 0),
 (2, 'Electrician', 'Seeking a skilled Electrician to handle installations, maintenance, and repair of electrical systems in residential and commercial settings. Candidates should be proficient in reading electrical schematics, using electrical testing equipment, and adhering to safety regulations. Certification as an electrician is mandatory.', 2, 'Atilim Limited Company', 'Adana', '2024-05-19 23:28:19', '2024-05-19 23:28:19', '2024-05-30 00:00:00', 'Electrical', 'Middle', 'Construction', 'Part Time', 'Undergraduate', 'Turkish,English', 0),
 (3, 'Landscaper', 'The Landscaper will engage in designing, implementing, and maintaining outdoor spaces. This includes planting, mulching, sod installation, and routine groundskeeping. Creativity in landscape design and practical skills in operating landscaping equipment are important.', 2, 'Atilim Limited Company', 'Konya', '2024-05-19 23:29:22', '2024-05-19 23:29:22', '2024-06-06 00:00:00', 'Landscaping', 'Middle', 'Groundskeeping', 'Full Time', 'High School', 'Turkish,English', 0),
 (4, 'Construction Worker', 'The Construction Worker will be involved in various construction projects, responsible for tasks such as framing, drywall installation, and concrete work. This position requires physical endurance, attention to safety protocols, and the ability to work effectively in a team. Previous experience in construction sites is highly valued.', 4, 'Test Limited Company', 'Adana', '2024-06-02 17:44:35', '2024-06-02 17:44:35', '2024-06-23 00:00:00', 'Construction', 'Junior', 'Construction', 'Full Time', 'High School', 'Turkish,English', 0),
 (5, 'Warehouse Associate', 'Warehouse Associates are crucial for managing inventory, organizing storage areas, and preparing orders for shipment. The position requires physical strength for lifting and moving stock, as well as attention to detail for tracking inventory. Experience in warehouse operations is preferred.', 4, 'Test Limited Company', 'Bursa', '2024-06-02 17:45:45', '2024-06-02 17:45:45', '2024-06-28 00:00:00', 'Logistics', 'Middle', 'Warehouse', 'Seasonal', 'Undergraduate', 'Turkish,English', 0),
 (6, 'HVAC Technician', 'HVAC Technicians will install, inspect, and repair heating, ventilation, and air conditioning systems. The job requires understanding of HVAC operations, the ability to troubleshoot and fix equipment, and excellent customer service skills. Prior experience and certification in HVAC technology are required.', 4, 'Test Limited Company', 'Denizli', '2024-06-02 17:46:52', '2024-06-02 17:46:52', '2024-07-01 00:00:00', 'HVAC', 'Senior', 'Technical', 'Full Time', 'Graduate', 'Turkish,English', 0);
+=======
+(2, 'Construction Worker', 'The Construction Worker will be involved in various construction projects, responsible for tasks such as framing, drywall installation, and concrete work. This position requires physical endurance, attention to safety protocols, and the ability to work ef', 2, 'Atılım Uni.', 'İstanbul', '2024-04-19 01:33:07', '2024-04-19 01:33:07', '2024-04-28 00:00:00', 'Construction', 'Junior', 'Construction', 'Full Time', 'High School', 'Turkish,English,German', 0),
+(3, 'Automotive Technician', 'Automotive Technicians are needed to perform diagnostics, repairs, and maintenance on various types of vehicles. The role involves troubleshooting mechanical issues, replacing faulty parts, and ensuring vehicles meet performance standards. Strong problem-', 2, 'Atılım Uni.', 'Gaziantep', '2024-04-19 01:44:47', '2024-04-19 01:44:47', '2024-04-29 00:00:00', 'Automative', 'Junior', 'Maintenance', 'Full Time', 'Graduate', 'Turkish,English', 0),
+(4, 'Electrician', 'Seeking a skilled Electrician to handle installations, maintenance, and repair of electrical systems in residential and commercial settings. Candidates should be proficient in reading electrical schematics, using electrical testing equipment, and adhering', 2, 'Atılım Uni.', 'Antalya', '2024-04-19 01:53:08', '2024-04-19 01:53:08', '2024-04-30 00:00:00', 'Electrical', 'Middle', 'Electrical', 'Full Time', 'Undergraduate', 'Turkish,French', 0),
+(5, 'Warehouse Associate', 'Warehouse Associates are crucial for managing inventory, organizing storage areas, and preparing orders for shipment. The position requires physical strength for lifting and moving stock, as well as attention to detail for tracking inventory. Experience i', 2, 'Atılım Uni.', 'Kahramanmaraş', '2024-04-19 01:54:07', '2024-04-19 01:54:07', '2024-04-22 00:00:00', 'Logistics', 'Junior', 'Warehouse', 'Part Time', 'High School', 'Turkish', 0),
+(6, 'HVAC Technician', 'HVAC Technicians will install, inspect, and repair heating, ventilation, and air conditioning systems. The job requires understanding of HVAC operations, the ability to troubleshoot and fix equipment, and excellent customer service skills. Prior experienc', 2, 'Atılım Uni.', 'Ankara', '2024-04-19 01:56:39', '2024-04-19 01:56:39', '2024-04-30 00:00:00', 'HVAC', 'Senior', 'Technical', 'Seasonal', 'Graduate', 'Turkish,English,Russian', 0),
+(7, 'Machine Operator', 'Machine Operators are required for operating and maintaining various types of machinery used in manufacturing. Responsibilities include setting up machines, running production cycles, and performing routine maintenance. The ability to follow safety proced', 2, 'Atılım Uni.', 'İzmir', '2024-04-19 02:00:49', '2024-04-19 02:00:49', '2024-04-28 00:00:00', 'Manufacturing', 'Middle', 'Production', 'Full Time', 'High School', 'Turkish', 0),
+(8, 'Plumber', 'Plumbers are needed to install, repair, and maintain plumbing systems in residential and commercial properties. Tasks include fixing leaks, unclogging drains, and installing fixtures. Applicants should have knowledge of plumbing codes and experience in bo', 2, 'Atılım Uni.', 'Adana', '2024-04-19 02:05:03', '2024-04-19 02:05:03', '2024-04-26 00:00:00', 'Plumbing', 'Junior', 'Maintenance', 'Seasonal', 'Undergraduate', 'Turkish,English', 0),
+(9, 'Carpenter', 'Carpenters will construct and repair building frameworks and structures such as stairways, doorframes, partitions, and rafters. The job involves measuring, cutting, and assembling materials made of wood and other components. Familiarity with power tools a', 2, 'Atılım Uni.', 'İstanbul', '2024-04-19 02:07:24', '2024-04-19 02:07:24', '2024-04-27 00:00:00', 'Construction', 'Senior', 'Construction', 'Full Time', 'High School', 'Turkish', 0),
+(10, 'Industrial Painter', 'The Industrial Painter will apply paint, varnishes, and coatings to various types of surfaces in an industrial setting. Responsibilities include preparing surfaces, mixing paints, and applying coatings uniformly. Knowledge of different painting techniques', 2, 'Atılım Uni.', 'Ankara', '2024-04-19 02:09:07', '2024-04-19 02:09:07', '2024-04-30 00:00:00', 'Industrial', 'Middle', 'Maintenance', 'Full Time', 'Graduate', 'Turkish,English,Arabic', 1);
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 -- --------------------------------------------------------
 
@@ -365,6 +392,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+<<<<<<< HEAD
 -- Dumping data for table `users`
 --
 
@@ -375,6 +403,8 @@ INSERT INTO `users` (`id`, `fullName`, `email`, `phoneNumber`, `password`, `acti
 (4, 'Ahmet Senturk', 'deneme@deneme.com', '5365905504', '33a485cb146e1153c69b588c671ab474f2e5b800', 1, NULL, 1, NULL, 1, '866520');
 
 --
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 -- Indexes for dumped tables
 --
 
@@ -452,19 +482,31 @@ ALTER TABLE `appliedjobs`
 -- AUTO_INCREMENT for table `bookmarks`
 --
 ALTER TABLE `bookmarks`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 --
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 --
 -- AUTO_INCREMENT for table `cvbuilder`
 --
 ALTER TABLE `cvbuilder`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 --
 -- AUTO_INCREMENT for table `department`
@@ -482,7 +524,11 @@ ALTER TABLE `experiences`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 --
 -- AUTO_INCREMENT for table `pwreset`
@@ -500,7 +546,11 @@ ALTER TABLE `sectors`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

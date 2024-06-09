@@ -1,10 +1,14 @@
 <?php
 include_once "config/connection.php";
+<<<<<<< HEAD
 include_once "search-job-model.php";
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 $latestJobPostings = $dbh->prepare("SELECT * FROM jobs ORDER BY id DESC LIMIT 6");
 $latestJobPostings->execute();
 $lastJobs = $latestJobPostings->fetchAll(PDO::FETCH_ASSOC);
+<<<<<<< HEAD
 
 $provinces = $dbh->prepare("SELECT province FROM provinces");
 $provinces->execute();
@@ -13,6 +17,8 @@ $province = $provinces->fetchAll(PDO::FETCH_ASSOC);
 $jobs = $dbh->prepare("SELECT jobTitle FROM jobs");
 $jobs->execute();
 $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 ?>
 <!DOCTYPE html>
 
@@ -28,6 +34,7 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 ================================================== -->
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/colors/main.css" id="colors">
+<<<<<<< HEAD
 	<style>
 		/* Styles for search suggestions dropdown */
 		#searchSuggestions {
@@ -50,6 +57,8 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 			background-color: #f0f0f0;
 		}
 	</style>
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 </head>
 
@@ -63,12 +72,18 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 
 		<!-- Banner
 ================================================== -->
+<<<<<<< HEAD
 		<div class="main-search-container" data-background-image="http://www.vasterad.com/themes/listeo_updated/images/main-search-background-01.jpg">
+=======
+		<div class="main-search-container"
+			data-background-image="http://www.vasterad.com/themes/listeo_updated/images/main-search-background-01.jpg">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 			<div class="main-search-inner">
 
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
+<<<<<<< HEAD
 							<form method="GET" action="search-job.php">
 								<h2>Find Nearby Attractions</h2>
 								<h4>Explore top-rated attractions, activities and more</h4>
@@ -102,6 +117,38 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 
 								</div>
 							</form>
+=======
+							<h2>Find Nearby Attractions</h2>
+							<h4>Expolore top-rated attractions, activities and more</h4>
+
+							<div class="main-search-input">
+
+								<div class="main-search-input-item">
+									<input type="text" placeholder="What are you looking for?" value="" />
+								</div>
+
+								<div class="main-search-input-item location">
+									<div id="autocomplete-container">
+										<input id="autocomplete-input" type="text" placeholder="Location">
+									</div>
+									<a href="#"><i class="fa fa-map-marker"></i></a>
+								</div>
+
+								<div class="main-search-input-item">
+									<select data-placeholder="All Categories" class="chosen-select">
+										<option>All Categories</option>
+										<option>Shops</option>
+										<option>Hotels</option>
+										<option>Restaurants</option>
+										<option>Fitness</option>
+										<option>Events</option>
+									</select>
+								</div>
+
+								<button class="button" onclick="window.location.href='search-job'">Search</button>
+
+							</div>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						</div>
 					</div>
 				</div>
@@ -203,11 +250,20 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 							requirements on our platform.</p>
 					</div>
 				</div>
+<<<<<<< HEAD
 
 			</div>
 			<div class="button-container" style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
 				<a href="login/user-register" class="button" style="background-color: #004dda;">Start the Journey <i class="fa fa-arrow-circle-right"></i></a>
 			</div>
+=======
+				
+			</div>
+			<div class="button-container" style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
+					<a href="login/user-register" class="button" style="background-color: #004dda;">Start the Journey <i
+							class="fa fa-arrow-circle-right"></i></a>
+				</div>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 		</div>
 		<!-- Info Section / End -->
 
@@ -241,6 +297,7 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 	<script type="text/javascript" src="scripts/tooltips.min.js"></script>
 	<script type="text/javascript" src="scripts/custom.js"></script>
 
+<<<<<<< HEAD
 	<script src="scripts/jquery-2.2.0.min.js"></script>
 	<script>
 		$(document).ready(function() {
@@ -277,6 +334,32 @@ $job = $jobs->fetchAll(PDO::FETCH_ASSOC);
 			});
 		});
 	</script>
+=======
+
+	<!-- Google Autocomplete -->
+	<script>
+		function initAutocomplete() {
+			var input = document.getElementById('autocomplete-input');
+			var autocomplete = new google.maps.places.Autocomplete(input);
+
+			autocomplete.addListener('place_changed', function () {
+				var place = autocomplete.getPlace();
+				if (!place.geometry) {
+					window.alert("No details available for input: '" + place.name + "'");
+					return;
+				}
+			});
+
+			if ($('.main-search-input-item')[0]) {
+				setTimeout(function () {
+					$(".pac-container").prependTo("#autocomplete-container");
+				}, 300);
+			}
+		}
+	</script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4t4fqmiMhTy9q24S6fjs6HwRmUwe7Nos&libraries=places&callback=initAutocomplete"></script>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 
 	<!-- Style Switcher

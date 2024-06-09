@@ -1,10 +1,14 @@
 {
     "require": {
+<<<<<<< HEAD
         "phpmailer/phpmailer": "*",
         "dompdf/dompdf": "^3.0",
         "mikehaertl/phpwkhtmltopdf": "^2.5"
     },
     "require-dev": {
         "phpunit/phpunit": "11"
+=======
+        "phpmailer/phpmailer": "*"
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     }
 }

@@ -66,9 +66,12 @@ if(isset($_GET['filters'])) {
     $filters = $_GET['filters'];
 }
 
+<<<<<<< HEAD
 // Retrieve search term from the URL
 $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 // Constructing the SQL query dynamically based on the received filters
 $query = "SELECT * FROM jobs WHERE 1=1";
 
@@ -76,17 +79,22 @@ $query = "SELECT * FROM jobs WHERE 1=1";
 foreach ($filterOptions as $option) {
     $key = $option['key'];
     if (!empty($filters[$key])) {
+<<<<<<< HEAD
         if ($key === 'province' || $key === 'sector') {
             $query .= " AND $key = ?";
         } else {
             $query .= " AND $key IN (" . implode(', ', array_fill(0, count($filters[$key]), '?')) . ")";
         }
+=======
+        $query .= " AND $key IN (" . implode(', ', array_fill(0, count($filters[$key]), '?')) . ")";
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     } else {
         // Initialize an empty array if the filter key doesn't exist
         $filters[$key] = [];
     }
 }
 
+<<<<<<< HEAD
 // Add search term to the query
 if (!empty($searchTerm)) {
     $query .= " AND (jobTitle LIKE ? OR companyName LIKE ?)";
@@ -100,4 +108,9 @@ $flatFilters = array_merge(...array_values($filters));
 // Assuming you have a database connection established, execute the query
 $stmt = $dbh->prepare($query);
 $stmt->execute($flatFilters);
+=======
+// Assuming you have a database connection established, execute the query
+$stmt = $dbh->prepare($query);
+$stmt->execute(array_merge(...array_values($filters)));
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 $jobListings = $stmt->fetchAll(PDO::FETCH_ASSOC);

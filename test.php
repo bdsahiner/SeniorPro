@@ -1,5 +1,6 @@
 <?php
 include_once "config/connection.php";
+<<<<<<< HEAD
 include_once "test-backend.php";
 ?>
 <!DOCTYPE html>
@@ -218,3 +219,11 @@ include_once "test-backend.php";
 </body>
 
 </html>
+=======
+
+$appliedJobData = $dbh->prepare("SELECT id FROM appliedjobs WHERE userId = ?");
+$appliedJobData->execute([1]);
+$appliedJobs = $appliedJobData->fetchAll();
+
+print_r ($appliedJobs);
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11

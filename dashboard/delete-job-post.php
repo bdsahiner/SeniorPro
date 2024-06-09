@@ -6,6 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 include_once "../config/connection.php";
 
+<<<<<<< HEAD
 require_once "../classes/log.class.php";
 $log = new Log();
 $ipAddress = $_SERVER['REMOTE_ADDR'];
@@ -24,6 +25,13 @@ $jobName = $jobTitle->fetch();
 $conn = $dbh->prepare("DELETE FROM jobs WHERE id = ? AND companyId = ?");
 if ($conn->execute([$jobId, $userId])) {
     $log->add($userFullName['fullName'] . ' deleted ' . $jobName['jobTitle'] . ' job posting from the IP address ' . $ipAddress . '.');
+=======
+$jobId = $_GET['id'];
+$userId = $_SESSION['id'];
+
+$conn = $dbh->prepare("DELETE FROM jobs WHERE id = ? AND companyId = ?");
+if ($conn->execute([$jobId, $userId])) {
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     echo "<script>alert('Successfully deleted.');history.go(-1);</script>";
     exit;
 } else {

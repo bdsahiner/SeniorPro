@@ -7,7 +7,11 @@ if (isset($_SESSION['employer'])) {
 
 	include_once "../model/functions.php";
 
+<<<<<<< HEAD
 ?>
+=======
+	?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 	<!DOCTYPE html>
 
@@ -100,11 +104,15 @@ if (isset($_SESSION['employer'])) {
 								</style>
 
 								<ul>
+<<<<<<< HEAD
 									<?php foreach ($jobPostData as $row) {
 										$countBookmarks = $dbh->prepare('SELECT COUNT(*) AS bookmarkCount FROM bookmarks WHERE jobId = ?');
 										$countBookmarks->execute([$row['id']]);
 										$bookmarkCount = $countBookmarks->fetch(PDO::FETCH_ASSOC)['bookmarkCount'];
 									?>
+=======
+									<?php foreach ($jobPostData as $row) { ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 										<li>
 											<div class="list-box-listing">
 												<div class="list-box-listing-img">
@@ -117,6 +125,7 @@ if (isset($_SESSION['employer'])) {
 														<h3><a href="../job-details?id=<?php echo $row['id']; ?>"><?php echo $row['jobTitle']; ?>
 																<span style="color: #004dda;">(<?php echo $row['experience']; ?>
 																	Level)</span></a></h3>
+<<<<<<< HEAD
 														<span class="job-post-span"><a href="../company-details?id=<?php echo $row['id']; ?>"><?php echo $row['companyName']; ?></a></span>
 														<div class="star-rating">
 															<i class="fa fa-map-marker" style="padding-right:7px;"></i><span><?php echo $row['province']; ?>,
@@ -124,10 +133,20 @@ if (isset($_SESSION['employer'])) {
 														</div>
 														<br>
 														<?php if(empty($bookmarkCount)) { echo 'No bookmarks for this job post.';} else { echo '' . $bookmarkCount . ' time(s) bookmarked';} ?>
+=======
+														<span class="job-post-span"><a
+																href="../company-details?id=<?php echo $row['id']; ?>"><?php echo $row['companyName']; ?></a></span>
+														<div class="star-rating">
+															<i class="fa fa-map-marker"
+																style="padding-right:7px;"></i><span><?php echo $row['province']; ?>,
+																Turkey </span>
+														</div>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 													</div>
 												</div>
 											</div>
 											<div class="buttons-to-right">
+<<<<<<< HEAD
 												<a href="edit-job-post?id=<?php echo $row['id']; ?>" class="button gray"><i class="sl sl-icon-note"></i> Edit</a>
 												<a href="delete-job-post?id=<?php echo $row['id']; ?>" class="button gray" onclick="return confirmDeletion()"><i class="sl sl-icon-close"></i>
 													Delete</a>
@@ -137,6 +156,16 @@ if (isset($_SESSION['employer'])) {
 									if (empty($jobPostData)) {
 										echo 'No job posts to show';
 									} ?>
+=======
+												<a href="edit-job-post?id=<?php echo $row['id']; ?>" class="button gray"><i
+														class="sl sl-icon-note"></i> Edit</a>
+												<a href="delete-job-post?id=<?php echo $row['id']; ?>" class="button gray"
+													onclick="return confirmDeletion()"><i class="sl sl-icon-close"></i>
+													Delete</a>
+											</div>
+										</li>
+									<?php } ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 								</ul>
 							</div>
 						</div>

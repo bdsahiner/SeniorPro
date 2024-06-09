@@ -8,10 +8,13 @@ require '../vendor/autoload.php';
 
 include_once "../config/connection.php";
 
+<<<<<<< HEAD
 require_once "../classes/log.class.php";
 $log = new Log();
 $ipAddress = $_SERVER['REMOTE_ADDR'];
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 if (isset($_POST['userEmail'])) {
 
     // Get the email input
@@ -36,7 +39,10 @@ if (isset($_POST['userEmail'])) {
         $checkID->execute([$emailAddress]);
         $bring = $checkID->fetch(PDO::FETCH_ASSOC);
         $userId = $bring['id'];
+<<<<<<< HEAD
         $userFullName = $bring['fullName'];
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
         // Set the current date for capturing the time of request
         $date = date("Y-m-d H:i:s");
@@ -81,8 +87,11 @@ if (isset($_POST['userEmail'])) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 
+<<<<<<< HEAD
             $log->add($userFullName . ' requested a password change from the IP address ' . $ipAddress . '.');
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
             // IF all successful, direct user to verification page
             header("Location: ../login/reset-verification?email=" . $emailAddress);
 

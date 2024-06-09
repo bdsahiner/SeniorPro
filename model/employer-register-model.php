@@ -8,6 +8,7 @@ require_once '../vendor/autoload.php';
 
 include_once "../config/connection.php";
 
+<<<<<<< HEAD
 require_once "../classes/log.class.php";
 $log = new Log();
 $ipAddress = $_SERVER['REMOTE_ADDR'];
@@ -15,6 +16,10 @@ $ipAddress = $_SERVER['REMOTE_ADDR'];
 if (isset($_POST['userEmail'])) {
 
     // Input data
+=======
+if (isset($_POST['userEmail'])) {
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     $fullName = trim($_POST['userName']);
     $phoneNumber = trim($_POST['phoneNumber']);
     $taxID = trim($_POST['taxID']);
@@ -27,14 +32,20 @@ if (isset($_POST['userEmail'])) {
     $checker->execute([$emailAddress]);
     $emailValidation = $checker->fetch(PDO::FETCH_ASSOC);
 
+<<<<<<< HEAD
     // After register, create employerId for companies table
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     $idCheck = $dbh->prepare("SELECT id FROM users ORDER BY id DESC");
     $idCheck->execute();
     $bringID = $idCheck->fetch(PDO::FETCH_ASSOC);
     $lastID = $bringID['id'];
     $userId = $lastID + 1;
 
+<<<<<<< HEAD
     // Check
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     if ($emailValidation['email'] == $emailAddress) {
         echo "<script>alert('This email address has already been registered. Please use another email.');history.go(-1);</script>";
         die();
@@ -75,8 +86,12 @@ if (isset($_POST['userEmail'])) {
             $mail->Body = $body;
 
             $mail->send();
+<<<<<<< HEAD
 
             $log->add($fullName . ' submitted an employer registration form from the IP address ' . $ipAddress . '.');
+=======
+            echo 'Message has been sent';
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }

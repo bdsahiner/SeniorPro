@@ -6,6 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 if (isset($_SESSION['employer'])) {
 
+<<<<<<< HEAD
     include_once "../config/connection.php";
 
     require_once "../classes/log.class.php";
@@ -20,6 +21,13 @@ if (isset($_SESSION['employer'])) {
     //Fetch the company ID (same with user ID)
     $companyId = $_SESSION['id'];
 
+=======
+    //Fetch the company ID (same with user ID)
+    $companyId = $_SESSION['id'];
+
+    include_once "../config/connection.php";
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     $currentDate = date("Y-m-d H:i:s");
 
     if (isset($_POST['submitJob'])) {
@@ -67,11 +75,18 @@ if (isset($_SESSION['employer'])) {
         $languages = isset($_POST['language']) ? $_POST['language'] : array();
         $languagePreference = is_array($languages) ? implode(',', $languages) : ''; // Convert array to comma-separated string
 
+<<<<<<< HEAD
         $query = "INSERT INTO jobs SET jobTitle = ?, jobDescription = ?, companyId = ?, companyName = ?, province = ?, requestDate = ?, publishDate = ?, endDate = ?, sector = ?, experience = ?, department = ?, workType = ?, educationLevel = ?, languagePreference = ?, verified = ?";
         $insert = $dbh->prepare($query);
 
         if ($insert->execute([$jobTitle, $jobDescription, $companyId, $companyName, $province, $currentDate, $currentDate, $endDate, $sector, $experience, $department, $workType, $education, $languagePreference, 0])) {
             $log->add($userFullName['fullName'] . ' requested to enter a job posting into the system from the IP address ' . $ipAddress . '.');
+=======
+        $query = "INSERT INTO jobs SET jobTitle = ?, jobDescription = ?, companyId = ?, companyName = ?, province = ?, requestDate = ?, endDate = ?, sector = ?, experience = ?, department = ?, workType = ?, educationLevel = ?, languagePreference = ?, verified = ?";
+        $insert = $dbh->prepare($query);
+
+        if ($insert->execute([$jobTitle, $jobDescription, $companyId, $companyName, $province, $currentDate, $endDate, $sector, $experience, $department, $workType, $education, $languagePreference, 0])) {
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
             echo "<script>alert('You have successfully submitted your job application. System admins will review your application and get back to you as soon as possible.');</script>";
             echo "<script>window.location.href = '../dashboard/my-job-posts';</script>";
             exit;

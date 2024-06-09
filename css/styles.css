@@ -10329,7 +10329,11 @@ header.fullwidth.dashboard .container {
     left: 0;
     top: 0;
     margin: 0
+<<<<<<< HEAD
     background-color: #FFF !important;
+=======
+    background-color: #FFF;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 }
 
 .dashboard #logo a {
@@ -10361,7 +10365,11 @@ header.fullwidth.dashboard .container {
 }
 
 .dashboard-nav {
+<<<<<<< HEAD
     background-color: rgba(10,22,73,0.9);
+=======
+    background-color: #2a2a2a;
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     display: block;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, .12);
     z-index: 11

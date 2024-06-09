@@ -1,5 +1,11 @@
 <?php
 
+<<<<<<< HEAD
+=======
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 if (session_status() === PHP_SESSION_NONE) {
 	session_start();
 }

@@ -118,6 +118,7 @@ if (isset($_SESSION['user'])) {
 										<li>
 											<i class="list-box-icon sl sl-icon-layers"></i> <?php echo $latest['experience']; ?>
 											<strong><a
+<<<<<<< HEAD
 													href="../job-details?id=<?php echo $latest['id']; ?>"><?php echo $latest['jobTitle']; ?></a></strong>
 											was posted at <?php echo date('d F, Y', strtotime($latest['publishDate'])); ?>
 										</li>
@@ -125,6 +126,12 @@ if (isset($_SESSION['user'])) {
 									if (empty($latestJobPostings)) {
 										echo 'No job post to show.';
 									} ?>
+=======
+													href="job-details?id=<?php echo $latest['id']; ?>"><?php echo $latest['jobTitle']; ?></a></strong>
+											was posted at <?php echo date('d F, Y', strtotime($latest['publishDate'])); ?>
+										</li>
+									<?php } ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 								</ul>
 							</div>
 						</div>
@@ -133,6 +140,7 @@ if (isset($_SESSION['user'])) {
 						<div class="col-lg-6 col-md-12">
 							<div class="dashboard-list-box invoices with-icons margin-top-20">
 								<h4>Applied Jobs</h4>
+<<<<<<< HEAD
 								<ul>
 									<?php foreach ($applicantDataDashboard as $jobId => $jobData) { ?>
 										<li><i class="list-box-icon sl sl-icon-doc"></i>
@@ -151,6 +159,23 @@ if (isset($_SESSION['user'])) {
 									if (empty($applicantDataDashboard)) {
 										echo 'No Applications yet.';
 									} ?>
+=======
+							<?php foreach ($applicantDataDashboard as $jobId => $jobData) {?>
+								<ul>
+
+									<li><i class="list-box-icon sl sl-icon-doc"></i>
+										<strong><?php echo $jobData['jobTitle']; ?></strong>
+										<ul>
+											<li class="unpaid"><?php echo $jobData['province']; ?></li>
+											<li><?php echo $jobData['companyName']; ?></li>
+											<li><?php echo date('d F, Y', strtotime($jobData['publishDate'])); ?></li>
+										</ul>
+										<div class="buttons-to-right">
+											<a href="../model/cancel-job-application?id=<?php echo $jobData['id']; ?>" class="button gray">Cancel</a>
+										</div>
+									</li>
+							<?php }?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 								</ul>
 							</div>
 						</div>
@@ -303,10 +328,14 @@ if (isset($_SESSION['user'])) {
 
 
 									</ul>
+<<<<<<< HEAD
 								<?php }
 								if (empty($jobPostData)) {
 									echo 'No job post to show.';
 								} ?>
+=======
+								<?php } ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 							</div>
 						</div>
 
@@ -334,6 +363,10 @@ if (isset($_SESSION['user'])) {
 												</div>
 
 											</li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 										</ul>
 									<?php } else {
 										echo 'No applicants to show.';
@@ -407,7 +440,162 @@ if (isset($_SESSION['user'])) {
 
 			<!-- Header Container
 ================================================== -->
+<<<<<<< HEAD
 			<?php include_once "header.php"; ?>
+=======
+			<header id="header-container" class="fixed fullwidth dashboard">
+
+				<!-- Header -->
+				<div id="header" class="not-sticky">
+					<div class="container">
+
+						<!-- Left Side Content -->
+						<div class="left-side">
+
+							<!-- Logo -->
+							<div id="logo" style="background-color: #FFF;">
+								<a href="index"><img src="images/logo-dark.svg" alt=""></a>
+								<a href="index" class="dashboard-logo"><img src="images/logo-light.svg" alt=""></a>
+							</div>
+
+							<!-- Main Navigation -->
+							<nav id="navigation" class="style-1">
+								<ul id="responsive">
+
+									<li><a href="#">Listings</a>
+										<ul>
+											<li><a href="#">List Layout</a>
+												<ul>
+													<li><a href="listings-list-with-sidebar.html">With Sidebar</a></li>
+													<li><a href="listings-list-full-width.html">Full Width</a></li>
+													<li><a href="listings-list-full-width-with-map.html">Full Width +
+															Map</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Grid Layout</a>
+												<ul>
+													<li><a href="listings-grid-with-sidebar-1.html">With Sidebar 1</a></li>
+													<li><a href="listings-grid-with-sidebar-2.html">With Sidebar 2</a></li>
+													<li><a href="listings-grid-full-width.html">Full Width</a></li>
+													<li><a href="listings-grid-full-width-with-map.html">Full Width +
+															Map</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Half Screen Map</a>
+												<ul>
+													<li><a href="listings-half-screen-map-list.html">List Layout</a></li>
+													<li><a href="listings-half-screen-map-grid-1.html">Grid Layout 1</a>
+													</li>
+													<li><a href="listings-half-screen-map-grid-2.html">Grid Layout 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a href="listings-single-page.html">Single Listing 1</a></li>
+											<li><a href="listings-single-page-2.html">Single Listing 2</a></li>
+										</ul>
+									</li>
+
+									<li><a class="current" href="#">User Panel</a>
+										<ul>
+											<li><a href="dashboard.html">Dashboard</a></li>
+											<li><a href="dashboard-messages.html">Messages</a></li>
+											<li><a href="dashboard-bookings.html">Bookings</a></li>
+											<li><a href="dashboard-my-listings.html">My Listings</a></li>
+											<li><a href="dashboard-reviews.html">Reviews</a></li>
+											<li><a href="dashboard-bookmarks.html">Bookmarks</a></li>
+											<li><a href="dashboard-add-listing.html">Add Listing</a></li>
+											<li><a href="dashboard-my-profile.html">My Profile</a></li>
+											<li><a href="dashboard-invoice.html">Invoice</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">Pages</a>
+										<div class="mega-menu mobile-styles three-columns">
+
+											<div class="mega-menu-section">
+												<ul>
+													<li class="mega-menu-headline">Pages #1</li>
+													<li><a href="pages-user-profile.html"><i class="sl sl-icon-user"></i>
+															User Profile</a></li>
+													<li><a href="pages-booking.html"><i class="sl sl-icon-check"></i>
+															Booking Page</a></li>
+													<li><a href="pages-add-listing.html"><i class="sl sl-icon-plus"></i> Add
+															Listing</a></li>
+													<li><a href="pages-blog.html"><i class="sl sl-icon-docs"></i> Blog</a>
+													</li>
+												</ul>
+											</div>
+
+											<div class="mega-menu-section">
+												<ul>
+													<li class="mega-menu-headline">Pages #2</li>
+													<li><a href="pages-contact.html"><i
+																class="sl sl-icon-envelope-open"></i> Contact</a></li>
+													<li><a href="pages-coming-soon.html"><i
+																class="sl sl-icon-hourglass"></i> Coming Soon</a></li>
+													<li><a href="pages-404.html"><i class="sl sl-icon-close"></i> 404
+															Page</a></li>
+													<li><a href="pages-masonry-filtering.html"><i
+																class="sl sl-icon-equalizer"></i> Masonry Filtering</a></li>
+												</ul>
+											</div>
+
+											<div class="mega-menu-section">
+												<ul>
+													<li class="mega-menu-headline">Other</li>
+													<li><a href="pages-elements.html"><i class="sl sl-icon-settings"></i>
+															Elements</a></li>
+													<li><a href="pages-pricing-tables.html"><i class="sl sl-icon-tag"></i>
+															Pricing Tables</a></li>
+													<li><a href="pages-typography.html"><i class="sl sl-icon-pencil"></i>
+															Typography</a></li>
+													<li><a href="pages-icons.html"><i class="sl sl-icon-diamond"></i>
+															Icons</a></li>
+												</ul>
+											</div>
+
+										</div>
+									</li>
+
+								</ul>
+							</nav>
+							<div class="clearfix"></div>
+							<!-- Main Navigation / End -->
+
+						</div>
+						<!-- Left Side Content / End -->
+
+						<!-- Right Side Content / End -->
+						<div class="right-side">
+							<!-- Header Widget -->
+							<div class="header-widget">
+
+								<!-- User Menu -->
+								<div class="user-menu">
+									<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>My
+										Account</div>
+									<ul>
+										<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
+										<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i>
+												Bookings</a></li>
+										<li name="logout"><a href="../login/logout.php"><i class="sl sl-icon-power"></i>
+												Logout</a></li>
+									</ul>
+								</div>
+
+								<a href="dashboard-add-listing.html" class="button border with-icon">Add Listing <i
+										class="sl sl-icon-plus"></i></a>
+							</div>
+							<!-- Header Widget / End -->
+						</div>
+						<!-- Right Side Content / End -->
+
+					</div>
+				</div>
+				<!-- Header / End -->
+
+			</header>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 			<div class="clearfix"></div>
 			<!-- Header Container / End -->
 
@@ -421,7 +609,42 @@ if (isset($_SESSION['user'])) {
 				<!-- Responsive Navigation Trigger -->
 				<a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
 
+<<<<<<< HEAD
 				<?php include_once "nav.php"; ?>
+=======
+				<div class="dashboard-nav">
+					<div class="dashboard-nav-inner">
+
+						<ul data-submenu-title="Main">
+							<li class="active"><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a>
+							</li>
+							<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
+						</ul>
+
+						<ul data-submenu-title="Listings">
+							<li><a><i class="sl sl-icon-layers"></i> My Listings</a>
+								<ul>
+									<li><a href="dashboard-my-listings.html">Active <span class="nav-tag green">6</span></a>
+									</li>
+									<li><a href="dashboard-my-listings.html">Pending <span
+												class="nav-tag yellow">1</span></a></li>
+									<li><a href="dashboard-my-listings.html">Expired <span class="nav-tag red">2</span></a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li>
+							<li><a href="dashboard-bookmarks.html"><i class="sl sl-icon-heart"></i> Bookmarks</a></li>
+							<li><a href="dashboard-add-listing.html"><i class="sl sl-icon-plus"></i> Add Listing</a></li>
+						</ul>
+
+						<ul data-submenu-title="Account">
+							<li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
+							<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+						</ul>
+
+					</div>
+				</div>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 				<!-- Navigation / End -->
 
 
@@ -433,6 +656,7 @@ if (isset($_SESSION['user'])) {
 					<div id="titlebar">
 						<div class="row">
 							<div class="col-md-12">
+<<<<<<< HEAD
 								<h2><?php foreach ($userName as $userData) {
 									$uName = $userData['fullName'];
 									echo 'Welcome, ' . $uName;
@@ -441,6 +665,13 @@ if (isset($_SESSION['user'])) {
 								<nav id="breadcrumbs">
 									<ul>
 										<li><a href="../">Home</a></li>
+=======
+								<h2>Howdy, Tom!</h2>
+								<!-- Breadcrumbs -->
+								<nav id="breadcrumbs">
+									<ul>
+										<li><a href="#">Home</a></li>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 										<li>Dashboard</li>
 									</ul>
 								</nav>
@@ -449,6 +680,17 @@ if (isset($_SESSION['user'])) {
 					</div>
 
 					<!-- Notice -->
+<<<<<<< HEAD
+=======
+					<div class="row">
+						<div class="col-md-12">
+							<div class="notification success closeable margin-bottom-30">
+								<p>Your listing <strong>Hotel Govendor</strong> has been approved!</p>
+								<a class="close" href="#"></a>
+							</div>
+						</div>
+					</div>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 
 					<!-- Content -->
 					<div class="row">
@@ -457,12 +699,50 @@ if (isset($_SESSION['user'])) {
 						<div class="col-lg-3 col-md-6">
 							<div class="dashboard-stat color-1">
 								<div class="dashboard-stat-content">
+<<<<<<< HEAD
 									<h4><?php echo count($jobPostData); ?></h4> <span><a href="../search-job"
 											style="color: #FFF;">Total Job Listings</a></span>
+=======
+									<h4>6</h4> <span>Active Listings</span>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 								</div>
 								<div class="dashboard-stat-icon"><i class="im im-icon-Map2"></i></div>
 							</div>
 						</div>
+<<<<<<< HEAD
+=======
+
+						<!-- Item -->
+						<div class="col-lg-3 col-md-6">
+							<div class="dashboard-stat color-2">
+								<div class="dashboard-stat-content">
+									<h4>726</h4> <span>Total Views</span>
+								</div>
+								<div class="dashboard-stat-icon"><i class="im im-icon-Line-Chart"></i></div>
+							</div>
+						</div>
+
+
+						<!-- Item -->
+						<div class="col-lg-3 col-md-6">
+							<div class="dashboard-stat color-3">
+								<div class="dashboard-stat-content">
+									<h4>95</h4> <span>Total Reviews</span>
+								</div>
+								<div class="dashboard-stat-icon"><i class="im im-icon-Add-UserStar"></i></div>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="col-lg-3 col-md-6">
+							<div class="dashboard-stat color-4">
+								<div class="dashboard-stat-content">
+									<h4>126</h4> <span>Times Bookmarked</span>
+								</div>
+								<div class="dashboard-stat-icon"><i class="im im-icon-Heart"></i></div>
+							</div>
+						</div>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 					</div>
 
 
@@ -471,6 +751,7 @@ if (isset($_SESSION['user'])) {
 						<!-- Recent Activity -->
 						<div class="col-lg-6 col-md-12">
 							<div class="dashboard-list-box with-icons margin-top-20">
+<<<<<<< HEAD
 								<h4>Recent Job Postings</h4>
 								<?php foreach ($jobPostData as $jb) {
 									$cmpName = $jb['companyName'];
@@ -520,6 +801,114 @@ if (isset($_SESSION['user'])) {
 
 									</ul>
 								<?php } ?>
+=======
+								<h4>Recent Activities</h4>
+								<ul>
+									<li>
+										<i class="list-box-icon sl sl-icon-layers"></i> Your listing <strong><a
+												href="#">Hotel Govendor</a></strong> has been approved!
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+
+									<li>
+										<i class="list-box-icon sl sl-icon-star"></i> Kathy Brown left a review <div
+											class="numerical-rating" data-rating="5.0"></div> on <strong><a href="#">Burger
+												House</a></strong>
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+
+									<li>
+										<i class="list-box-icon sl sl-icon-heart"></i> Someone bookmarked your <strong><a
+												href="#">Burger House</a></strong> listing!
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+
+									<li>
+										<i class="list-box-icon sl sl-icon-star"></i> Kathy Brown left a review <div
+											class="numerical-rating" data-rating="3.0"></div> on <strong><a
+												href="#">Airport</a></strong>
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+
+									<li>
+										<i class="list-box-icon sl sl-icon-heart"></i> Someone bookmarked your <strong><a
+												href="#">Burger House</a></strong> listing!
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+
+									<li>
+										<i class="list-box-icon sl sl-icon-star"></i> John Doe left a review <div
+											class="numerical-rating" data-rating="4.0"></div> on <strong><a href="#">Burger
+												House</a></strong>
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+
+									<li>
+										<i class="list-box-icon sl sl-icon-star"></i> Jack Perry left a review <div
+											class="numerical-rating" data-rating="2.5"></div> on <strong><a href="#">Tom's
+												Restaurant</a></strong>
+										<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Invoices -->
+						<div class="col-lg-6 col-md-12">
+							<div class="dashboard-list-box invoices with-icons margin-top-20">
+								<h4>Invoices</h4>
+								<ul>
+
+									<li><i class="list-box-icon sl sl-icon-doc"></i>
+										<strong>Professional Plan</strong>
+										<ul>
+											<li class="unpaid">Unpaid</li>
+											<li>Order: #00124</li>
+											<li>Date: 20/07/2017</li>
+										</ul>
+										<div class="buttons-to-right">
+											<a href="dashboard-invoice.html" class="button gray">View Invoice</a>
+										</div>
+									</li>
+
+									<li><i class="list-box-icon sl sl-icon-doc"></i>
+										<strong>Extended Plan</strong>
+										<ul>
+											<li class="paid">Paid</li>
+											<li>Order: #00108</li>
+											<li>Date: 14/07/2017</li>
+										</ul>
+										<div class="buttons-to-right">
+											<a href="dashboard-invoice.html" class="button gray">View Invoice</a>
+										</div>
+									</li>
+
+									<li><i class="list-box-icon sl sl-icon-doc"></i>
+										<strong>Extended Plan</strong>
+										<ul>
+											<li class="paid">Paid</li>
+											<li>Order: #00097</li>
+											<li>Date: 10/07/2017</li>
+										</ul>
+										<div class="buttons-to-right">
+											<a href="dashboard-invoice.html" class="button gray">View Invoice</a>
+										</div>
+									</li>
+
+									<li><i class="list-box-icon sl sl-icon-doc"></i>
+										<strong>Basic Plan</strong>
+										<ul>
+											<li class="paid">Paid</li>
+											<li>Order: #00091</li>
+											<li>Date: 30/06/2017</li>
+										</ul>
+										<div class="buttons-to-right">
+											<a href="dashboard-invoice.html" class="button gray">View Invoice</a>
+										</div>
+									</li>
+
+								</ul>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 							</div>
 						</div>
 
@@ -560,7 +949,10 @@ if (isset($_SESSION['user'])) {
 	</body>
 
 	</html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 	<?php
 } else {
 	echo '<script>alert("Please login first!");</script>';

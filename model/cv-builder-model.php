@@ -8,6 +8,7 @@ $userId = $_SESSION['id'];
 
 include "../config/connection.php";
 
+<<<<<<< HEAD
 require_once "../classes/log.class.php";
 $log = new Log();
 $ipAddress = $_SERVER['REMOTE_ADDR'];
@@ -16,6 +17,8 @@ $name = $dbh->prepare("SELECT fullName FROM users WHERE id = ?");
 $name->execute([$userId]);
 $userFullName = $name->fetch();
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 try {
     if (isset($_POST['generalDescription'])) {
         $stmt = $dbh->prepare("INSERT INTO cvbuilder (fullName, emailAddress, phoneNumber, province, generalDescription, totalExperience, expTitle, expCompany, expMonths, expDescription, eduSchoolTitle, eduDepartment, eduYears, eduDescription, additionalDescription, userId, submittedAt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -82,7 +85,10 @@ try {
             $errors = $stmt->errorInfo();
             echo "Error: " . $errors[2];
         } else {
+<<<<<<< HEAD
             $log->add($userFullName['fullName'] . ' filled out the CV builder from the IP address ' . $ipAddress . '.');
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
             // Show success message
             echo "<script>alert('Successfully submitted.');</script>";
         }

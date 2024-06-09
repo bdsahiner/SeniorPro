@@ -8,10 +8,13 @@ require_once '../vendor/autoload.php';
 
 include_once "../config/connection.php";
 
+<<<<<<< HEAD
 require_once "../classes/log.class.php";
 $log = new Log();
 $ipAddress = $_SERVER['REMOTE_ADDR'];
 
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 if (isset($_POST['userEmail'])) {
 
     $fullName = trim($_POST['userName']);
@@ -61,9 +64,13 @@ if (isset($_POST['userEmail'])) {
             $mail->Body = $body;
 
             $mail->send();
+<<<<<<< HEAD
 
             $log->add($fullName . ' submitted a user registration form from the IP address ' . $ipAddress . '.');
 
+=======
+            echo 'Message has been sent';
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }

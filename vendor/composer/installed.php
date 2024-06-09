@@ -19,6 +19,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
         'dompdf/dompdf' => array(
             'pretty_version' => 'v3.0.0',
             'version' => '3.0.0.0',
@@ -118,6 +119,8 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
         'phpmailer/phpmailer' => array(
             'pretty_version' => 'v6.9.1',
             'version' => '6.9.1.0',
@@ -127,6 +130,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
         'phpunit/php-code-coverage' => array(
             'pretty_version' => '11.0.3',
             'version' => '11.0.3.0',
@@ -334,5 +338,7 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
     ),
 );

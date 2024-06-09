@@ -118,8 +118,12 @@ $expData = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="button-container" style="text-align: center; margin-top: 20px;">
+<<<<<<< HEAD
       <a href="edit-cv" class="button" style="background-color: #004dda;">Edit CV <i class="fa fa-arrow-circle-right"></i></a>
       <a href="download-cv" class="button" style="background-color: #004dda;">Download CV <i class="fa fa-arrow-circle-right"></i></a>
+=======
+      <a href="#" class="button" style="background-color: #004dda;">Edit CV <i class="fa fa-arrow-circle-right"></i></a>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
       <a href="../dashboard" class="button" style="background-color: #004dda;">Back to Dashboard <i class="fa fa-arrow-circle-right"></i></a>
     </div>
 

@@ -64,6 +64,7 @@ if (isset($_SESSION['employer'])) {
 
 	<?php
 }
+<<<<<<< HEAD
 
 if (isset($_SESSION['admin'])) {
 
@@ -101,5 +102,7 @@ if (isset($_SESSION['admin'])) {
 
 	<?php
 }
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 ?>
 

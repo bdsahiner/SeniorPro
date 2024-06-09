@@ -83,7 +83,11 @@ header("location: ../dashboard/");
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
+<<<<<<< HEAD
 						<input class="input100" type="password" name="userPw" minlength="8" placeholder="Type your password">
+=======
+						<input class="input100" type="password" name="userPw" placeholder="Type your password">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 

@@ -1,6 +1,7 @@
 {
     "packages": [
         {
+<<<<<<< HEAD
             "name": "dompdf/dompdf",
             "version": "v3.0.0",
             "version_normalized": "3.0.0.0",
@@ -632,6 +633,8 @@
             "install-path": "../phar-io/version"
         },
         {
+=======
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
             "name": "phpmailer/phpmailer",
             "version": "v6.9.1",
             "version_normalized": "6.9.1.0",
@@ -714,6 +717,7 @@
                 }
             ],
             "install-path": "../phpmailer/phpmailer"
+<<<<<<< HEAD
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2275,4 +2279,10 @@
         "sebastian/version",
         "theseer/tokenizer"
     ]
+=======
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 }

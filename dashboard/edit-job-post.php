@@ -106,8 +106,12 @@ if (isset($_SESSION['employer'])) {
 												<div class="col-md-6">
 													<h5>Sector </h5>
 													<select name="sector" class="chosen-select-no-single" disabled>
+<<<<<<< HEAD
 														<option value="<?php echo $job['sector'] ?>">
 															<?php echo $job['sector'] ?>
+=======
+														<option value="<?php echo $job['sector'] ?>"><?php echo $job['sector'] ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 														</option>
 													</select>
 												</div>
@@ -117,15 +121,24 @@ if (isset($_SESSION['employer'])) {
 													<h5>Department </h5>
 													<select name="department" class="chosen-select-no-single" disabled>
 														<option value="<?php echo $job['department'] ?>">
+<<<<<<< HEAD
 															<?php echo $job['department'] ?>
 														</option>
+=======
+															<?php echo $job['department'] ?></option>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 													</select>
 												</div>
 
 												<div class="form">
 													<h5>Job Description <span>*</span></h5>
+<<<<<<< HEAD
 													<textarea name="jobDescript" id="summary"
 														><?php echo $job['jobDescription'] ?></textarea>
+=======
+													<input type="text" name="jobDescript" id="summary" spellcheck="true"
+														value="<?php echo $job['jobDescription'] ?>">
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 												</div>
 
 											</div>
@@ -152,8 +165,12 @@ if (isset($_SESSION['employer'])) {
 													<h5>Province </h5>
 													<select name="province" class="chosen-select-no-single">
 														<option value="<?php echo $job['province'] ?>" disabled selected>
+<<<<<<< HEAD
 															<?php echo $job['province'] ?>
 														</option>
+=======
+															<?php echo $job['province'] ?></option>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 													</select>
 												</div>
 
@@ -182,8 +199,12 @@ if (isset($_SESSION['employer'])) {
 												</h5>
 												<select name="experience" class="chosen-select-no-single" disabled>
 													<option value="<?php echo $job['experience'] ?>">
+<<<<<<< HEAD
 														<?php echo $job['experience'] ?>
 													</option>
+=======
+														<?php echo $job['experience'] ?></option>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 												</select>
 											</div>
 
@@ -192,8 +213,12 @@ if (isset($_SESSION['employer'])) {
 												<h5>Education Level </h5>
 												<select name="education" class="chosen-select-no-single" disabled>
 													<option value="<?php echo $job['educationLevel'] ?>">
+<<<<<<< HEAD
 														<?php echo $job['educationLevel'] ?>
 													</option>
+=======
+														<?php echo $job['educationLevel'] ?></option>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 												</select>
 											</div>
 
@@ -204,8 +229,12 @@ if (isset($_SESSION['employer'])) {
 											<div class="col-md-6">
 												<h5>Work Type </h5>
 												<select name="workType" class="chosen-select-no-single" disabled>
+<<<<<<< HEAD
 													<option value="<?php echo $job['workType'] ?>">
 														<?php echo $job['workType'] ?>
+=======
+													<option value="<?php echo $job['workType'] ?>"><?php echo $job['workType'] ?>
+>>>>>>> d0e3feff85a61d296b72d15fcd80ba24f9d17e11
 													</option>
 												</select>
 											</div>
